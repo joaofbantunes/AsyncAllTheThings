@@ -1,0 +1,788 @@
+{
+	"info": {
+		"_postman_id": "ee4ed384-41a5-408e-beb7-1144f3c26dd8",
+		"name": "Async all the things",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "#02 - AsyncAllTheWay",
+			"item": [
+				{
+					"name": "sad",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:46852/path/sad",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "46852",
+							"path": [
+								"path",
+								"sad"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "happy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:46852/path/happy",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "46852",
+							"path": [
+								"path",
+								"happy"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "almost-as-sad",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:46852/path/almost-as-sad",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "46852",
+							"path": [
+								"path",
+								"almost-as-sad"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "almost-as-sad-but-a-little-less",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:46852/path/almost-as-sad-but-a-little-less",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "46852",
+							"path": [
+								"path",
+								"almost-as-sad-but-a-little-less"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "almost-as-sad-with-exception",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:46852/path/almost-as-sad-with-exception",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "46852",
+							"path": [
+								"path",
+								"almost-as-sad-with-exception"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "almost-as-sad-but-a-little-less-with-exception",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:46852/path/almost-as-sad-but-a-little-less-with-exception",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "46852",
+							"path": [
+								"path",
+								"almost-as-sad-but-a-little-less-with-exception"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "#03 - ResultVsGetAwaiterGetResult",
+			"item": [
+				{
+					"name": "when-all-goes-right/result",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/when-all-goes-right/result",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"when-all-goes-right",
+								"result"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "when-all-goes-right/get-awaiter-get-result",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/when-all-goes-right/get-awaiter-get-result",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"when-all-goes-right",
+								"get-awaiter-get-result"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "when-it-goes-wrong/result",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/when-it-goes-wrong/result",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"when-it-goes-wrong",
+								"result"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "when-it-goes-wrong/get-awaiter-get-result",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/when-it-goes-wrong/get-awaiter-get-result",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"when-it-goes-wrong",
+								"get-awaiter-get-result"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "#04 - WastingThreads",
+			"item": [
+				{
+					"name": "when-we-block-a-thread",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/when-we-block-a-thread",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"when-we-block-a-thread"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "when-we-dont-block-a-thread",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/when-we-dont-block-a-thread",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"when-we-dont-block-a-thread"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "#05 - ConfigureAwait",
+			"item": [
+				{
+					"name": "no-more-deadlocks",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:55584/configure-await-false/no-more-deadlocks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "55584",
+							"path": [
+								"configure-await-false",
+								"no-more-deadlocks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "but-we-lose-context",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:55584/configure-await-false/but-we-lose-context",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "55584",
+							"path": [
+								"configure-await-false",
+								"but-we-lose-context"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "back-to-deadlocks",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:55584/configure-await-false/back-to-deadlocks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "55584",
+							"path": [
+								"configure-await-false",
+								"back-to-deadlocks"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "#06 - ReturnTaskWithoutAwaiting",
+			"item": [
+				{
+					"name": "get-something",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/return-no-await/get-something",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"return-no-await",
+								"get-something"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "use-disposable",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/return-no-await/use-disposable",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"return-no-await",
+								"use-disposable"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "stack-trace-with-await",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/return-no-await/stack-trace-with-await",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"return-no-await",
+								"stack-trace-with-await"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "stack-trace-without-await",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/return-no-await/stack-trace-without-await",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"return-no-await",
+								"stack-trace-without-await"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "#07 - MakingRequestsInParallel",
+			"item": [
+				{
+					"name": "in-series",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/parallel-requests/in-series",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"parallel-requests",
+								"in-series"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "in-parallel-1",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/parallel-requests/in-parallel-1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"parallel-requests",
+								"in-parallel-1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "in-parallel-2",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/parallel-requests/in-parallel-2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"parallel-requests",
+								"in-parallel-2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "in-parallel-3",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/parallel-requests/in-parallel-3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"parallel-requests",
+								"in-parallel-3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "in-parallel-3-alt",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/parallel-requests/in-parallel-3-alt",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"parallel-requests",
+								"in-parallel-3-alt"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "#08 - ItAintAsyncAsSoonAsItsCalled",
+			"item": [
+				{
+					"name": "not-parallel-until-suspension",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/not-immediately-async/not-parallel-until-suspension",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"not-immediately-async",
+								"not-parallel-until-suspension"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "not-parallel-until-suspension-2",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/not-immediately-async/not-parallel-until-suspension-2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"not-immediately-async",
+								"not-parallel-until-suspension-2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "not-parallel-at-all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/not-immediately-async/not-parallel-at-all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"not-immediately-async",
+								"not-parallel-at-all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "parallel-but-wasting-threads",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/not-immediately-async/parallel-but-wasting-threads",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"not-immediately-async",
+								"parallel-but-wasting-threads"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "#10 - CancellationTokens",
+			"item": [
+				{
+					"name": "do-something-cancellable",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/ct/do-something-cancellable",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"ct",
+								"do-something-cancellable"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "#12 - TaskCompletionSource",
+			"item": [
+				{
+					"name": "ask",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/tcs/ask/stuff",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"tcs",
+								"ask",
+								"stuff"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "tell",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/tcs/ask/stuff/tell/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"tcs",
+								"ask",
+								"stuff",
+								"tell",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ask-sync-continuation",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/tcs/ask-sync-continuation/stuff",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"tcs",
+								"ask-sync-continuation",
+								"stuff"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "#13 - CancellationTokenSource",
+			"item": [
+				{
+					"name": "procrastinate",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/cts/procrastinate/30",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"cts",
+								"procrastinate",
+								"30"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "yell",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/cts/yell",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"cts",
+								"yell"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "#14 - DuckTyping",
+			"item": [
+				{
+					"name": "instance",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/duck-typing/instance",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"duck-typing",
+								"instance"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "extension",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/duck-typing/extension",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"duck-typing",
+								"extension"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
