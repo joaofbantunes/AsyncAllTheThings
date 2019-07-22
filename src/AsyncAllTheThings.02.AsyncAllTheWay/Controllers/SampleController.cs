@@ -40,6 +40,43 @@ namespace AsyncAllTheThings._02.AsyncAllTheWay.Controllers
                 .Result;
         }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // this is talked about in the next DEMO
+
+
         [HttpGet]
         [Route("almost-as-sad-but-a-little-less")]
         public int AlmostAsSadButALittleLessPath()

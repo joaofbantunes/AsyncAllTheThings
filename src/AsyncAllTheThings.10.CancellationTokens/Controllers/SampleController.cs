@@ -11,6 +11,8 @@ namespace AsyncAllTheThings._10.CancellationTokens.Controllers
     public class SampleController : ControllerBase
     {
         private static readonly Uri SampleEndpoint = new Uri("https://httpstat.us/200?sleep=10000");
+        private static readonly Uri SampleEndpoint2 = new Uri("https://httpstat.us/200");
+        private static readonly Uri SampleEndpoint3 = new Uri("https://httpstat.us/200?sleep=10000");
 
         private readonly HttpClient _httpClient;
         private readonly ILogger<SampleController> _logger;
@@ -42,11 +44,13 @@ namespace AsyncAllTheThings._10.CancellationTokens.Controllers
             // we're getting some info, sure, let it be cancelled
             await _httpClient.GetAsync(SampleEndpoint, ct);
 
-            // if we're causing side effects that can't be easily undone (like adding something to the database in a transaction)
+            // if we're causing side effects that can't be easily undone 
+            // (adding something to the database in a transaction is easilly cancellable, sending an email for instance, isn't)
             // we shouldn't allow for cancellation anymore, to try and avoid inconsistencies
             // (they can still happen in case of failures, but we don't need to make our job even harder :P)
             dynamic somePayload = new { thing = 1 };
-            await _httpClient.PostAsync(SampleEndpoint, somePayload); // no ct for you!
+            await _httpClient.PostAsync(SampleEndpoint2, somePayload, ct); // the first could have a ct...
+            await _httpClient.PostAsync(SampleEndpoint3, somePayload); // but no ct for you!
         }
     }
 }
