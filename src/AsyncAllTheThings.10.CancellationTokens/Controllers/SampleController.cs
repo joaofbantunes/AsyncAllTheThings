@@ -29,11 +29,11 @@ namespace AsyncAllTheThings._10.CancellationTokens.Controllers
             try
             {
                 await _httpClient.GetAsync(SampleEndpoint, ct);
-                _logger.LogDebug("Not cancelled!");
+                _logger.LogDebug("Not canceled!");
             }
             catch (TaskCanceledException)
             {
-                _logger.LogDebug("Cancelled!");
+                _logger.LogDebug("Canceled!");
             }
         }
 
@@ -41,11 +41,11 @@ namespace AsyncAllTheThings._10.CancellationTokens.Controllers
         // Imagine a request does multiple things, but at some point causes side effects that are not easily cancellable
         public async Task DoSomethingCancellableAndSomethingNotAsync(CancellationToken ct)
         {
-            // we're getting some info, sure, let it be cancelled
+            // we're getting some info, sure, let it be canceled
             await _httpClient.GetAsync(SampleEndpoint, ct);
 
             // if we're causing side effects that can't be easily undone 
-            // (adding something to the database in a transaction is easilly cancellable, sending an email for instance, isn't)
+            // (adding something to the database in a transaction is easily cancellable, sending an email for instance, isn't)
             // we shouldn't allow for cancellation anymore, to try and avoid inconsistencies
             // (they can still happen in case of failures, but we don't need to make our job even harder :P)
             dynamic somePayload = new { thing = 1 };
