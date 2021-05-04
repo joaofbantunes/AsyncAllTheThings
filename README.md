@@ -2,4 +2,4 @@
 
 Example driven presentation on using `Task`, `async`, `await` and related bits in C#, with focus on ASP.NET (Core)
 
-![logo](https://github.com/joaofbantunes/AsyncAllTheThings/blob/main/presentation/assets/async_all_the_things.jpg)
+![logo](presentation/assets/async-all-the-things.png)
